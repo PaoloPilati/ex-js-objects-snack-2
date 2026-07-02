@@ -3,12 +3,12 @@ const hamburger = { name: "Cheese Burger", weight: 250 };
 const secondBurger = hamburger;
 secondBurger.name = 'Double Cheese Burger';
 secondBurger.weight = 500;
-​
-console.log(hamburger.name); // ?
-console.log(secondBurger.name ); // ?
 
-//Senza lanciare il codice, riesci a prevedere cosa viene stampato in console?
-//Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
+console.log(hamburger.name); // Double Cheese Burger
+console.log(secondBurger.name ); // Double Cheese Burger
+
+//Senza lanciare il codice, riesci a prevedere cosa viene stampato in console? ---> Double Cheese Burger x2
+//Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? ---> 1
 
 
 //🏆 Code Question 2
@@ -17,18 +17,19 @@ const hamburger = {
     weight: 250,
     ingredients: ["Cheese", "Meat", "Bread", "Tomato"]
 };
-​
+
 const secondBurger = {...hamburger};
 secondBurger.ingredients[0] = "Salad";
-​
-console.log(hamburger.ingredients[0]); // ?
-console.log(secondBurger.ingredients[0]); // ?
+
+console.log(hamburger.ingredients[0]); // 1
+console.log(secondBurger.ingredients[0]); // 1
 
 //P.S.: Ricordati che gli Array, come gli oggetti, sono dei Reference Type (Tipi di Riferimento)!
-//Senza lanciare il codice, riesci a prevedere cosa viene stampato in console?
-//Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
 
-🏆 Code Question 3
+//Senza lanciare il codice, riesci a prevedere cosa viene stampato in console? ---> 1 (Salad)
+//Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? ---> 2 oggetti (oggetto originale + oggetto shallow copy con l'array ingredients condiviso)
+
+//🏆 Code Question 3
 const hamburger = { 
     name: "Cheese Burger", 
     weight: 250,
