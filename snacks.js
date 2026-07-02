@@ -162,11 +162,16 @@ function deepClone(value) {
   }, {});  //https://medium.com/@ayogesh1214/deep-cloning-objects-in-javascript-without-json-methods-object-assign-ca3aba5e60f6
 
   //ALTERNATIVA PIU LEGGIBILE AL REDUCE
-  //Object.keys(value).forEach((key) => {
-  //clone[key] = deepClone(value[key]);
-//});
+    //const clone = {};
+
+    //Object.keys(value).forEach((key) => {
+    //clone[key] = deepClone(value[key]);
+    //});
+
+    //return clone;
 
 }
 
 
 const chef2 = deepClone(chef);
+console.log(chef2)
