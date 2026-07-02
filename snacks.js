@@ -43,11 +43,11 @@ const hamburger = {
         age: 29
     }
 };
-​
+
 const secondBurger = structuredClone(hamburger);
 const thirdBurger = structuredClone(hamburger);
 
-//Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice?
+//Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? ---> 3 oggetti (1 iniziale [hamburger] e 2 deep copy [second/thirdBurger]) x 3 ( 2 oggetti annidati [hamburger > maker > restaurant])
 
 
 //🏆 Code Question 4
@@ -58,7 +58,7 @@ const chef = {
         console.log(`Ecco ${num} hamburger per te!`);
     },
 }
-​
+
 const restaurant = {
     name: "Hyur's Burgers",
     address: {
@@ -68,8 +68,8 @@ const restaurant = {
     openingDate: new Date(2025, 3, 11),
     isOpen: false,
 };
-//Qual è il metodo migliore per clonare l’oggetto chef, e perché?
-//Qual è il metodo migliore per clonare l’oggetto restaurant, e perché?
+//Qual è il metodo migliore per clonare l’oggetto chef, e perché? ---> Uno spread, per copiare la funzione contenuta nella proprietà makeBurger.
+//Qual è il metodo migliore per clonare l’oggetto restaurant, e perché? ---> structuredClone() perché contiene dati annidati e mantiene new Date come oggetto di tipo "Date", mentre stringify la trasforma in stringa.
 
 
 //🎯 Code Question 5 (Bonus)
