@@ -175,3 +175,7 @@ function deepClone(value) {
 
 const chef2 = deepClone(chef);
 console.log(chef2)
+
+chef2.makeBurger(2);
+chef2.restaurant.welcomeClient();
+chef2.restaurant.address.showAddress();
