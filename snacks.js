@@ -170,6 +170,24 @@ function deepClone(value) {
 
     //return clone;
 
+
+    // *OPPURE*
+    //function deepCopy(obj){
+    //  if(typeof obj !== 'object'){
+    //      return obj;
+    //  }
+    //  const copy ={};
+    //  for(const key in obj){
+    //      const value = obj[key];
+    //      if(typeof value !== 'object){
+    //          copy[key] = value;
+    //      }else{
+    //          copy[key] = deepCopy(value);
+    //    }
+    //  return copy
+    //  }
+    //}
+
 }
 
 
