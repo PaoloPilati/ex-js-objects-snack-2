@@ -27,7 +27,7 @@ console.log(secondBurger.ingredients[0]); // 1
 //P.S.: Ricordati che gli Array, come gli oggetti, sono dei Reference Type (Tipi di Riferimento)!
 
 //Senza lanciare il codice, riesci a prevedere cosa viene stampato in console? ---> 1 (Salad)
-//Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? ---> 2 oggetti (oggetto originale + oggetto shallow copy con l'array ingredients condiviso)
+//Quanti oggetti sono stati creati in memoria durante l'esecuzione di questo codice? ---> 3 oggetti (oggetto originale + oggetto shallow copy + l'array ingredients condiviso [tipo di riferimento = oggetto])
 
 //🏆 Code Question 3
 const hamburger = { 
